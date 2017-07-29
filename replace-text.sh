@@ -16,5 +16,6 @@ for line in fileinput.FileInput(fileTarget, inplace=1):
     if replaceText in line:
          count += 1
          line = line.replace(replaceText, withText)
+    print line, # print to file
 
 print("Replaced %s lines in file %s" % (count, fileTarget))
